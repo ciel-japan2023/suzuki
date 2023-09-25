@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>美味しいKitchen</title>
+
+        <style>
+            body{background-color:#EEEEEE}
+            #beer_rg{color:#FFFF33}
+            #beer_ale{color:#FF6600}
+            #beer_ipa{color:#FF9900}
+            #beer_stt{color:#330000}
+            
+            .intr{color:#555555;}
+            #all p span{color:#FFFF33;}
+            em{font-weight:900;}
+
+            h1{border-bottom: double 5px #880808;} /*ボーダーライン*/
+            h3{
+                position: relative;
+                padding:0.25em 0.5em;/*文字周りの余白*/
+                background: -webkit-linear-gradient(to right, rgb(255, 186, 115), transparent);
+                background: linear-gradient(to right, rgb(255, 186, 115), transparent);
+                /*background:#feffea;/*背景色*/
+                border-left:solid 5px #880808;/*左の線*/ 
+                border-bottom:solid 3px #C57E7E;
+            }
+        </style>
+ 
+    </head>
+
+
+    <body>
+
+
+        <div id="all">
+        <h1>ビールを選ぶ</h1>
+        <p>好みの香りや味、苦味から最高の1杯を選んでください。</p>
+
+        <div class="intr">
+        <h2>種類から選ぶ</h2>
+        <p>下記のから好きなビールを選んでください。</p>
+        </div>
+        
+        <div id="beer_rg">
+        <h3>ラガー</h3>
+        </div>
+        <p>いわゆる日本の<em><span>ビール</span></em>といえばこのあたり。すっきりとした飲みごたえ。</p>
+        <img src="beer-rg.jpg" alt="ラガー" width="100" height="100">
+
+        <div id="beer_ale">
+        <h3>エール</h3>
+        </div>
+        <p>クラフトビールっぽさがあるのはこちら。<em>フルーティーな香り</em>と強い味を楽しみましょう。</p>
+
+        <div id="beer_ipa">
+        <h3>IPA</h3>
+        </div>
+        <p>よりフルーティー、<em>より強い苦味</em>があるのはこちら。ハマったらとことんハマる。</p>
+
+        <div id="beer_stt">
+        <h3>スタウト</h3>
+        </div>
+        <p>いわゆる黒ビール。炭酸は控えめ、細かくクリーミーな泡が特徴。<em>俺が一番好き。</em></p>
+        </div>
+    </body>   
+</html>

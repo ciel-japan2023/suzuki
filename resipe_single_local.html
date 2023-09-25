@@ -1,0 +1,89 @@
+<html>
+
+<head>
+	<!-- htmlファイルと同じフォルダにあるjQuery.jsを読み込む -->
+	<script type="text/javascript"  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- 文字コードをUTF-8に設定（文字化け防止） -->
+	<meta charset="UTF-8">
+	<!-- タイトル -->
+	<title>数字当てゲーム</title>
+
+	<style>
+    	/* ここにCSSを書く */
+        body{
+            background-color:#E0E0FF
+        }
+
+		#history{
+			width: 70%;
+			height: 55%;
+			overflow-y: scroll;
+            background: #000000;
+            color:#00FF00
+		}
+
+		#input_num,#status,#top{
+			margin-bottom: 5%;
+            background: #dfefff;
+            box-shadow: 0px 0px 0px 5px #dfefff;
+            border: dashed 1px #96c2fe;
+            padding: 0.2em 0.5em;
+            color: #454545;
+		}
+
+	</style>
+</head>
+
+<body>
+    <!-- ここに画面に表示する内容を書く -->
+		<input type="text"  id="pl_num"/>
+        <textarea name="ta_test" cols="30" rows="10"></textarea>
+        <input type="button" id ="btn01" name="btn01" value="Go!!" />
+        <input type="button" id ="btn02" name="btn02" value="Get!!" />
+        <div id="history"></div>
+	</div>
+	
+	
+	<script>                                
+	    // ここにJavaScriptを書く
+		const key   = "name";
+		const value = "John";
+
+			try{
+			// locaStorageに保存
+            localStorage.setItem("test1", 123);
+            localStorage.setItem("test2", true);
+            localStorage.setItem("test3", [1,2,3]);
+            localStorage.setItem("test4", {"a":"foo", "b":"bar"});
+
+            console.log(
+            localStorage.getItem("test1"),  // "123" (文字列)
+            localStorage.getItem("test2"),  // "true" (文字列)
+            localStorage.getItem("test3"),  // "1,2,3" (文字列)
+            localStorage.getItem("test4")   // "[object Object]" (文字列)
+            );
+
+			}
+			catch(e){
+			console.log(e);
+		}
+
+        $("#btn01").on("click",function(){
+			$("#pl_num").text("")
+            let str_text = document.getElementById("pl_num").value;
+            localStorage.setItem("test5",str_text);
+            console.log(pl_num);
+            console.log(str_text);
+            console.log(localStorage.getItem("test5"));
+        });
+
+        $("#btn02").on("click",function(){
+            console.log(localStorage.getItem("test5"));
+            document.getElementById('history').value = localStorage.getItem("test5");
+            $("#history").text(localStorage.getItem("test5")).val();
+        });
+        
+	</script>
+</body>
+
+</html>

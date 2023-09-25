@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<!-- htmlファイルと同じフォルダにあるjQuery.jsを読み込む -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- 文字コードをUTF-8に設定（文字化け防止） -->
+	<meta charset="UTF-8">
+	<!-- タイトル -->
+	<title>練習問題</title>
+
+	<style>
+    	/* ここにCSSを書く */
+	</style>
+</head>
+
+<body>
+	<!-- ここに画面に表示する内容を書く -->
+	<div id="test"></div>
+
+
+	<script>
+	    // ここにJavaScriptを書く
+        let i;
+        let j;
+        let str;
+		let spc;
+		let flr = 20;
+
+        for(i=0;i<flr;i=i+1){
+            str = "";
+            spc = "";
+
+			for(j=0;j<1+i;j++){
+                str = str + "＊";
+            }      
+
+			for(j=0;j<flr-i;j=j+1){
+				spc = spc + "　";
+			}
+        document.write("<div>"+spc+""+str+"</div>");
+
+        }
+
+        //$("#test").text("Google");
+	</script>
+</body>
+
+</html>

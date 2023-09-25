@@ -1,0 +1,99 @@
+<html>
+
+<head>
+	<!-- htmlファイルと同じフォルダにあるjQuery.jsを読み込む -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- 文字コードをUTF-8に設定（文字化け防止） -->
+	<meta charset="UTF-8">
+	<!-- タイトル -->
+	<title>練習問題</title>
+
+	<style>
+    	/* ここにCSSを書く */
+		#text{color:brown}
+		#test{color:blueviolet}
+		#add_btn{color:#FF0000}
+		#button2{color:#0000FF}
+	</style>
+</head>
+
+<body>
+	<!-- ここに画面に表示する内容を書く -->
+	<input type="text" id="num1" />
+    +
+    <input type="text" id="num2" />
+    
+    
+    <!-- <button id = "button">Go!!</button> -->
+    <input type="button" id ="add_btn" name="add_btn" value="Add" /> 
+	<input type="button" id ="button2" name="button2" value="Delete!!" />
+    <input type="button" id ="alert" name="alert" value="Alert!!" /> 
+	<input type="checkbox" name="checkbox"/>
+
+    <div id="test"></div>
+        
+        <script>
+
+        // ここにJavaScriptを書く
+        //let = nam1_ck;
+        //nam1_ck = isNaN(num1);
+        //document.write("<div>""</div>");
+
+        $("#add_btn").on("click",function(){
+            //$("#test").append(($("#num1").val()) + ($("#num2").val()));
+         
+
+            // ifの分岐はうまくいってるっぽいけどisNaNの使い方が間違っていて詰んでそう。
+            // false条件を見直して再度頑張るべし。
+            $(function(){
+            if(isNaN(($("#num1").val())) == true){
+                console.log(Number.isNaN((($("#num1").val()))))
+                $(function comfck(){
+                    //alert("あ゛あ゛あ゛あ゛あ゛あ゛あ゛！゛！゛！゛！゛")
+                        if(confirm("エラーです、数値1を消しますか？")){
+                            $(function clearText() {
+	                        var textForm = document.getElementById("num1");
+                                textForm.value = '';
+                            });
+
+                        } else {
+                        alert("数値1は残ったままです。");
+                     }
+                });
+
+            } else if (isNaN(($("#num2").val())) == true){
+                console.log(Number.isNaN((($("#num2").val()))))
+                $(function comfck(){
+                    //alert("あ゛あ゛あ゛あ゛あ゛あ゛あ゛！゛！゛！゛！゛")
+                        if(confirm("エラーです、数値2を消しますか？")){
+                            $(function clearText() {
+	                        var textForm = document.getElementById("num2");
+                                textForm.value = '';
+                            });
+
+                        } else {
+                        alert("数値2は残ったままです。");
+                     }
+                });
+                
+            s
+            } else {
+                console.log(Number.isNaN((($("#num1").val()))))
+                console.log($("#num1"))
+
+            $("#test").append(Number($("#num1").val()) + Number($("#num2").val()));
+            }
+            });
+        });
+    
+
+        $("#button2").on("click",function(){
+            $("#test").text("")
+        });
+       
+
+
+	</script>
+</body>
+
+</html>
